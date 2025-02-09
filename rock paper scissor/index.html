@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="12-rock-paper-scissors.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <!--no onclick , we used addeventlistener in js-->
+    <button class="images-button js-rock-button"><img class="images" src="images/rock-emoji.png"></button>
+
+    <button class="images-button js-paper-button"><img class="images" src="images/paper-emoji.png"></button>
+
+    <button class="images-button js-scissors-button"><img class="images" src="images/scissors-emoji.png"></button>
+
+
+    <p class="js-result result"></p>
+    <p class="js-moves moves">
+    </p>
+    <p class="js-scoreElement score"></p>
+
+    <button onclick="
+    score.wins =0;
+    score.losses =0;
+    score.ties =0;
+    localStorage.removeItem('score');
+    updatescore();
+
+    " class="reset-button">
+      Resest score
+    </button>
+
+    <button class="auto-play js-auto-play" >
+      Auto Play
+    </button>
+
+    <script src="12-rock-paper-scissors.js">
+      
+    </script>
+  </body>
+</html>
